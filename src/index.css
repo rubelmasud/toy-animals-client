@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgba(255, 255, 255, 0.993) !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: xx-large;
+  font-style: oblique;
+  font-weight: 600;
+}
+
+.active {
+  color: blue;
+}
+
+li {
+  font-size: 17px;
+  font-weight: 500;
+}
