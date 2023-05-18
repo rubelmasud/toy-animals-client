@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/Images/Logo/images-removebg-preview.png'
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
+
+    const { user } = useContext(AuthContext)
 
     const items = <>
         <li> <NavLink
@@ -10,14 +13,32 @@ const Navbar = () => {
                 isPending ? "pending" : isActive ? "active" : ""}>Home
         </NavLink></li>
 
-        <li>  <li> <NavLink
+        <li> <NavLink
             to="/blog" className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""}>Blog
-        </NavLink></li></li>
+        </NavLink></li>
 
+        <li> <NavLink
+            to="/allAnimal" className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""}>All Animal
+        </NavLink></li>
+
+        {user ?
+            <div className='flex gap-3'>
+                <li> <NavLink
+                    to="/addToy" className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""}>Add Toy
+                </NavLink></li>
+                <li> <NavLink
+                    to="/myToy" className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "active" : ""}>My Toy
+                </NavLink></li>
+            </div>
+            : ''
+        }
     </>
     return (
-        <div className="navbar bg-base-200 md:w-11/12 mx-auto rounded-md shadow-md p-3 md:px-12">
+        <div className="navbar bg-base-200  rounded-md shadow-md p-3 md:px-12 items-center">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,13 +50,23 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-4">
                     <Link className="logo" to='/'>Toy Animal</Link>
-                    <img className='w-10 h-10' src={logo} alt="" />
+                    <img className='w-10 h-10 hover:animate-spin ' src={logo} alt="" />
                 </div>
             </div >
             <div className="navbar-end hidden lg:flex">
                 <ul className="lg:flex gap-4">
                     {items}
                 </ul>
+            </div>
+            <div className="navbar-end">
+                {user ?
+                    <>
+                        <img className='rounded-full mr-2' title={user?.DisplayName} src='' alt="hello" />
+                        <button className="btn btn-primary btn-sm btn-outline">Logout</button>
+                    </>
+                    :
+                    <button className="btn btn-outline btn-info btn-sm  bg-slate-300">Login</button>
+                }
             </div>
 
         </div >

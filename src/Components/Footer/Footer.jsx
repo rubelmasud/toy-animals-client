@@ -2,9 +2,11 @@ import React from 'react';
 import logo from '../../assets/Images/Logo/images-removebg-preview.png';
 import { Link } from 'react-router-dom';
 
+import { FaGoogle, FaYoutube, FaInstagramSquare, FaTwitter, FaCopyright } from 'react-icons/fa';
+
 const Footer = () => {
     return (
-        <footer className="bg-base-200 text-center">
+        <footer className="bg-base-200 ">
             <div className="footer p-10  text-base-content">
                 <div className=''>
                     <img className='w-10 h-10' src={logo} alt="" />
@@ -23,7 +25,23 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="">
-                    <p>Copyright</p>
+                    <div className="border text-gray-500 mb-3">
+                        <p className='footer-title '>Contact me</p>
+                        <hr />
+                        <p className='ml-0'>Email: inforubel@gmail.com</p>
+                        <p className='ml-0'>Phone: 00121-57979 </p>
+                    </div>
+                    <div className="flex gap-4 ">
+                        <Link to='https://www.google.com/'>   <FaGoogle className='w-6 h-6 text-green-500'></FaGoogle></Link>
+                        <Link to='https://www.youtube.com/'>   <FaYoutube className='w-6 h-6 text-red-500'></FaYoutube></Link>
+                        <Link to='https://www.instagram.com/'> <FaInstagramSquare className='w-6 h-6 text-red-800'></FaInstagramSquare></Link>
+                        <Link to='https://www.twitter.com/'>  <FaTwitter className='w-6 h-6 text-blue-700'></FaTwitter></Link>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <FaCopyright className='w-4 h-4 text-gray-500'></FaCopyright >
+                        <p> Copyright © 2023 - All right reserved</p>
+                    </div>
+
                 </div>
             </div>
 
