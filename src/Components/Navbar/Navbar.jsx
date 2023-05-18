@@ -28,25 +28,25 @@ const Navbar = () => {
 
         <li> <NavLink
             to="/allAnimal" className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""}>All Animal
+                isPending ? "pending" : isActive ? "active" : ""}>All Animals
         </NavLink></li>
 
         {user ?
             <div className='flex gap-3'>
                 <li> <NavLink
                     to="/addToy" className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""}>Add Toy
+                        isPending ? "pending" : isActive ? "active" : ""}>Add Animal
                 </NavLink></li>
                 <li> <NavLink
                     to="/myToy" className={({ isActive, isPending }) =>
-                        isPending ? "pending" : isActive ? "active" : ""}>My Toy
+                        isPending ? "pending" : isActive ? "active" : ""}>My Animals
                 </NavLink></li>
             </div>
             : ''
         }
     </>
     return (
-        <div className="navbar bg-base-200  rounded-md shadow-md p-3 md:px-12 items-center">
+        <div className="navbar bg-base-200  rounded-md shadow-md p-3 items-center">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
