@@ -5,7 +5,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 
 const Register = () => {
-    const { createRegisterUser } = useContext(AuthContext)
+    const { createRegisterUser, updateUserProfile } = useContext(AuthContext)
 
     const [error, setError] = useState("");
 
@@ -35,6 +35,7 @@ const Register = () => {
 
             createRegisterUser(email, password)
                 .then((result) => {
+                    updateUserProfile(result.user, name, photoUrl)
                     const user = result.user;
                     console.log(user);
                     alert('user register successfully')
@@ -45,7 +46,17 @@ const Register = () => {
                 });
         }
 
+        updateUserProfile({ displayName: name, url: photoUrl })
+            .then(() => {
+                console.log('user update done');
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+
     }
+
+
 
     return (
         <div className='  w-full lg:flex m-12  items-center'>

@@ -34,11 +34,11 @@ const Login = () => {
         signInGoogle()
             .then((result) => {
                 const user = result.user;
-                console.log(user, hello);
+                console.log(user);
                 alert('Login SussesFully ')
             })
             .catch((error) => {
-                console.log(error);
+                console.log(error.message);
             })
     }
 

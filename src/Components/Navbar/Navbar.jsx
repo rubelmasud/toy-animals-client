@@ -5,7 +5,15 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch((error) => {
+                console.log(error);
+            })
+    }
 
     const items = <>
         <li> <NavLink
@@ -61,8 +69,8 @@ const Navbar = () => {
             <div className="navbar-end">
                 {user ?
                     <>
-                        <img className='rounded-full mr-2' title={user?.DisplayName} src='' alt="hello" />
-                        <button className="btn btn-primary btn-sm btn-outline shadow-md">Logout</button>
+                        <img className='rounded-full mr-2 w-8 h-8' title={user?.displayName} src={user.photoURL} alt="" />
+                        <button onClick={handleLogout} className="btn btn-primary btn-sm btn-outline shadow-md">Logout</button>
                     </>
                     :
                     <Link to='/login'> <button className="btn btn-primary btn-sm btn-outline shadow-md">Login</button></Link>}
