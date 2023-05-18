@@ -62,11 +62,10 @@ const Navbar = () => {
                 {user ?
                     <>
                         <img className='rounded-full mr-2' title={user?.DisplayName} src='' alt="hello" />
-                        <button className="btn btn-primary btn-sm btn-outline">Logout</button>
+                        <button className="btn btn-primary btn-sm btn-outline shadow-md">Logout</button>
                     </>
                     :
-                    <button className="btn btn-outline btn-info btn-sm  bg-slate-300">Login</button>
-                }
+                    <Link to='/login'> <button className="btn btn-primary btn-sm btn-outline shadow-md">Login</button></Link>}
             </div>
 
         </div >
