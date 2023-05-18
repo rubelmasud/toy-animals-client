@@ -11,12 +11,12 @@ import {
     updateProfile
 } from "firebase/auth";
 
-export const AuthContext = createContext(null)
+export const AuthContext = createContext()
 const auth = getAuth(app);
 const GoogleProvider = new GoogleAuthProvider()
 
 const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
     const createRegisterUser = (email, password) => {
@@ -64,7 +64,8 @@ const AuthProvider = ({ children }) => {
         loggedUser,
         signInGoogle,
         updateUserProfile,
-        logOut
+        logOut,
+        loading
     }
     return (
         <AuthContext.Provider value={authInfo}>

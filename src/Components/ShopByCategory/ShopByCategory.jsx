@@ -14,8 +14,8 @@ const ShopByCategory = () => {
     }, [])
     return (
         <div className='mt-16'>
-            <h2 className='text-4xl font-semibold text-center'>Shopping Now !</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-6 mx-6">
+            <h2 className='text-4xl font-semibold text-center underline'>Shopping Now !</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 w-11/12 mx-auto">
                 {
                     animals.map(animal => <AnimalCard
                         key={animal._id}

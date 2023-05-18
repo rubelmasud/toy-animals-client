@@ -39,6 +39,7 @@ const Register = () => {
                     const user = result.user;
                     console.log(user);
                     alert('user register successfully')
+                    form.reset()
                 })
                 .catch((error) => {
                     console.log(error);

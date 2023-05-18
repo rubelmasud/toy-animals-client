@@ -1,18 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AnimalCard = ({ animal }) => {
-    const { description, pictureURL, price, quantity, rating, subCategory, name } = animal || ""
-    console.log(animal);
-    return (
+    const { _id, pictureURL, price, rating, name } = animal || ""
 
-        <div className="card w-96 bg-base-200 shadow hover:-translate-y-5 duration-200">
-            <img className='h-60 rounded-xl p-3' src={pictureURL} alt="" />
+
+
+    return (
+        <div className="card w-90 bg-base-200 shadow hover:-translate-y-5 my-3 duration-200">
+            <img className='h-60 rounded-xl p-3 shadow' src={pictureURL} alt="" />
             <div className="card-body">
-                <h2 className="card-title">{name}</h2>
+                <div className="flex">
+                    <h2 className="card-title ">{name}</h2>
+                    <p className='text-end'>Ratting: {rating}</p>
+                </div>
                 <p>Price : {price}</p>
-                <p>Ratting: {rating}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary btn-outline btn-sm">Show Details</button>
+                    <Link to={`/details/:${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
                 </div>
             </div>
         </div>
