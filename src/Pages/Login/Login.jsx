@@ -23,8 +23,8 @@ const Login = () => {
                 const loggedUser = result.user
                 console.log(loggedUser);
                 alert('user login is successful')
-                navigate(from, { replace: true })
                 form.reset()
+                navigate(from, { replace: true })
             })
             .catch((error) => {
                 console.log(error);
@@ -40,6 +40,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 alert('Login SussesFully ')
+                navigate(from, { replace: true })
             })
             .catch((error) => {
                 console.log(error.message);

@@ -9,7 +9,6 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return <div className='text-center my-4'><button className="btn btn-square loading"></button></div>
     }
-
     if (user) {
         return children;
     }

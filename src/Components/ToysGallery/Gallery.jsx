@@ -29,19 +29,19 @@ const Gallery = () => {
                     <div class="w-full p-1 md:p-2">
                         <img
                             alt="gallery"
-                            class="block h-full w-full rounded-lg object-cover object-center"
+                            className="block h-full w-full rounded-lg object-cover object-center"
                             src="https://i.ibb.co/VtHbgrJ/3d-illustration-children-s-toy-bear-23-2149345293.jpg" />
                     </div>
-                    <div class="w-1/2 p-1 md:p-2">
+                    <div className="w-1/2 p-1 md:p-2">
                         <img
                             alt="gallery"
-                            class="block h-full w-full rounded-lg object-cover object-center animate-bounce"
+                            className="block h-full w-full rounded-lg object-cover object-center animate-bounce"
                             src="https://i.ibb.co/k8ZGBqN/3d-dog-illustration-isolated-white-background-puppy-3d-illustration-isolated-white-background-516484.jpg" />
                     </div>
-                    <div class="w-1/2 p-1 md:p-2">
+                    <div className="w-1/2 p-1 md:p-2">
                         <img
                             alt="gallery"
-                            class="block h-96 w-full rounded-lg object-cover object-center animate-bounce"
+                            className="block h-96 w-full rounded-lg object-cover object-center animate-bounce"
                             src="https://i.ibb.co/F5D3cb2/fluffy-toy-texture-close-up-23-2149686878.jpg" />
                     </div>
                 </div>
