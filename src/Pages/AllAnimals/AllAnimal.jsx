@@ -32,7 +32,7 @@ const AllAnimal = () => {
         event.preventDefault()
         const form = event.target;
         const name = form.name.value
-        form.reset()
+
 
         const options = { method: 'GET' };
 
@@ -40,7 +40,7 @@ const AllAnimal = () => {
             .then(response => response.json())
             .then(response => setAllToyAnimal(response))
             .catch(err => console.error(err));
-
+        form.reset()
 
     }
 

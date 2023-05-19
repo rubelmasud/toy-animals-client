@@ -22,7 +22,7 @@ const AddToy = () => {
             .then((result) => {
                 console.log(result);
             });
-        console.log(data);
+
     };
 
 
