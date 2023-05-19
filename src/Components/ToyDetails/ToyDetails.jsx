@@ -7,7 +7,7 @@ import { FaGoogle, FaYoutube, FaInstagramSquare, FaTwitter, FaCopyright } from '
 const ToyDetails = () => {
     const details = useLoaderData();
 
-    const { name, pictureURL, sellerEmail, sellerName, subCategory, price, rating, description, availableQuantity, } = details
+    const { name, pictureURL, sellerEmail, sellerName, subCategory, price, rating, description, availableQuantity, } = details || {}
 
     return (
         <div className="card lg:card-side bg-base-200 shadow-xl m-12">

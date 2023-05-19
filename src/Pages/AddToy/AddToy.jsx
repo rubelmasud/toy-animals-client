@@ -1,10 +1,65 @@
 import React from 'react';
+import { useContext } from 'react';
+import { useForm } from "react-hook-form";
+import { Form } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext)
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+
+    const onSubmit = data => {
+        console.log(data)
+
+        fetch("http://localhost:5000/postToy", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                console.log(result);
+            });
+        console.log(data);
+    };
+
+
     return (
-        <div>
-            AddToy
-            AddToy
+        <div className='m-12 '>
+            <h2 className='text-3xl text-center font-semibold mb-4 underline'>Add A Toy</h2>
+            <div className="grid md:grid-cols-2 items-center">
+                <Form onSubmit={handleSubmit(onSubmit)} >
+                    <input className='border-2 rounded-md w-5/12 h-14 px-2 my-2 mr-2' defaultValue="toy name" {...register("name")} />
+
+                    <input className='border-2 rounded-md w-6/12 h-14 px-2' defaultValue=" Toy photo url" {...register("pictureURL")} />
+
+                    <input className='border-2 rounded-md w-6/12 h-14 px-2 mr-2' value={user?.displayName} {...register("sellerName")} />
+
+                    <select {...register("subCategory")}>
+                        <option value="Math Toys">Math Toys</option>
+                        <option value="Language Toys">Language Toys</option>
+                        <option value="Science Toys">Science Toys</option>
+                    </select>
+
+                    <input className='border-2 rounded-md w-7/12 h-14 px-2 my-2 mr-1' value={user?.email} {...register("sellerEmail")} />
+
+                    <input className='border-2 rounded-md w-5/12 h-14 px-2 my-2' defaultValue="Price" {...register("price")} />
+
+                    <input className='border-2 rounded-md w-6/12 h-14 px-2 mx-2' defaultValue="Rating" {...register("rating")} />
+
+                    <input type='number' className='border-2 rounded-md w-5/12 h-14 px-2 my-2' defaultValue="Available quantity" {...register("availableQuantity")} />
+
+                    <input className='border-2 rounded-md w-11/12 h-14 px-2 ' defaultValue="Detail description" {...register("description")} />
+
+
+                    <div className="text-center justify-center mx-auto">
+                        <input className="bg-blue-800 w-10/12 font-semibold text-white px-8 py-2 mt-12 " value="Post Toy" type="submit" />
+                    </div>
+                </Form>
+                <img src="https://i.ibb.co/vQPHmLD/toy.png" alt="toy" border="0" />
+            </div>
         </div>
     );
 };

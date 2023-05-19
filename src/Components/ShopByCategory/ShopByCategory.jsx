@@ -8,7 +8,6 @@ const ShopByCategory = () => {
     const handleTabClick = (tabName) => {
         setActiveTab(tabName)
     }
-    console.log(activeTab);
 
     useEffect(() => {
         const options = { method: 'GET' };
@@ -36,7 +35,7 @@ const ShopByCategory = () => {
                     Science Toys
                 </a>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 my-6 w-11/12 mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-6 w-11/12 mx-auto">
                 {
                     animals.map(animal => <AnimalCard
                         key={animal._id}

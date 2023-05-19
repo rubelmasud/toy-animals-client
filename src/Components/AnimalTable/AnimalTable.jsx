@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AnimalTable = ({ animal }) => {
-    console.log(animal);
-    const { name, subCategory, pictureURL, price, availableQuantity, sellerName, _id } = animal || ''
+
+    const { name, subCategory, pictureURL, price, availableQuantity, sellerName, _id } = animal || {}
     return (
 
         <tr className=''>
