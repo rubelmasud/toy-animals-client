@@ -4,7 +4,7 @@ const Gallery = () => {
     return (
         <div class="container mx-auto px-5 py-2 lg:px-14 lg:pt-20 bg-base-200">
             <h2 className='text-4xl text-center mb-16  font-semibold underline'>Animals Photo Gallery !</h2>
-            <div class="-m-1 flex flex-wrap md:-m-2">
+            <div class=" mx-auto flex flex-wrap md:m-2">
                 <div class="flex w-1/2 flex-wrap">
                     <div class="w-1/2 p-1 md:p-2">
                         <img

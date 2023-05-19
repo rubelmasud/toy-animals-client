@@ -4,7 +4,7 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 
 const AnimalCard = ({ animal }) => {
-    const { _id, pictureURL, price, rating, name } = animal || ""
+    const { _id, pictureURL, price, rating, name } = animal
 
     return (
         <div className="card w-90 bg-base-200 shadow hover:-translate-y-5 my-3 duration-200">
@@ -16,7 +16,7 @@ const AnimalCard = ({ animal }) => {
                     <Rating style={{ maxWidth: 70 }} value={rating} readOnly />
                 </p>
                 <div className="card-actions justify-end">
-                    <Link to={`/details/:${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+                    <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
                 </div>
             </div>
         </div>
