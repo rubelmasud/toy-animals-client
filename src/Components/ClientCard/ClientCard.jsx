@@ -6,7 +6,7 @@ const ClientCard = ({ client }) => {
     console.log(client);
     return (
 
-        <div className="card p-4 shadow-xl" data-aos="flip-left">
+        <div className="card p-4 shadow-xl my-4" data-aos="flip-left">
             <div className=" flex items-center gap-3">
                 <div class="avatar online ">
                     <div class="w-24 rounded-full justify-center mx-auto text-center animate-bounce">
