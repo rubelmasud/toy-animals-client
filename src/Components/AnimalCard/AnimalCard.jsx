@@ -1,11 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const AnimalCard = ({ animal }) => {
+    const { user } = useContext(AuthContext)
     const { _id, pictureURL, price, rating, name } = animal
+    const navigate = useNavigate()
 
+
+    const handleShowDetailsAlert = () => {
+        alert("You have to log in first to view details")
+        navigate('/login')
+    }
     return (
         <div className="card w-90 bg-base-200 shadow hover:-translate-y-5 my-3 duration-200">
             <img className='h-48 rounded-xl p-3 shadow' src={pictureURL} alt="" />
@@ -16,7 +24,12 @@ const AnimalCard = ({ animal }) => {
                     <Rating style={{ maxWidth: 70 }} value={rating} readOnly />
                 </p>
                 <div className="card-actions justify-end">
-                    <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+
+                    {
+                        user ? <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+                            : <Link onClick={handleShowDetailsAlert}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+                    }
+
                 </div>
             </div>
         </div>
