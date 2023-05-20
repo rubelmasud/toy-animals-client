@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import Swal from 'sweetalert2';
 
 const UpdateToy = () => {
 
@@ -15,7 +16,7 @@ const UpdateToy = () => {
     const onUpdate = data => {
         console.log(data)
 
-        fetch(`http://localhost:5000/postToy/${_id}`, {
+        fetch(`https://toy-animals-server.vercel.app/postToy/${_id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -23,7 +24,15 @@ const UpdateToy = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result);
-                alert('updated successfully')
+                if (result.modifiedCount > 0) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your updated successfully !!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             });
 
     };

@@ -8,7 +8,7 @@ const AllAnimal = () => {
     const [disable, setDisable] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/AllToys/data', {
+        fetch('https://toy-animals-server.vercel.app/AllToys/data', {
             method: "GET"
         })
             .then(response => response.json())
@@ -17,7 +17,7 @@ const AllAnimal = () => {
     }, [])
 
     const handleShowAll = () => {
-        fetch('http://localhost:5000/AllToys', {
+        fetch('https://toy-animals-server.vercel.app/AllToys', {
             method: "GET"
         })
             .then(response => response.json())
@@ -36,7 +36,7 @@ const AllAnimal = () => {
 
         const options = { method: 'GET' };
 
-        fetch(`http://localhost:5000/AllToys/${name}`, options)
+        fetch(`https://toy-animals-server.vercel.app/AllToys/${name}`, options)
             .then(response => response.json())
             .then(response => setAllToyAnimal(response))
             .catch(err => console.error(err));

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -7,15 +7,18 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const AnimalCard = ({ animal }) => {
     const { user } = useContext(AuthContext)
     const { _id, pictureURL, price, rating, name } = animal
+
     const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
 
 
     const handleShowDetailsAlert = () => {
         alert("You have to log in first to view details")
-        navigate('/login')
+        navigate(from, { replace: true })
     }
     return (
-        <div className="card w-90 bg-base-200 shadow hover:-translate-y-5 my-3 duration-200">
+        <div className="card w-90 bg-base-200 shadow hover:-translate-y-5 my-3 duration-200" data-aos="flip-up">
             <img className='h-48 rounded-xl p-3 shadow' src={pictureURL} alt="" />
             <div className="card-body">
                 <h2 className="card-title ">{name}</h2>
@@ -27,7 +30,7 @@ const AnimalCard = ({ animal }) => {
 
                     {
                         user ? <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
-                            : <Link onClick={handleShowDetailsAlert}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+                            : <Link onClick={handleShowDetailsAlert} to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
                     }
 
                 </div>

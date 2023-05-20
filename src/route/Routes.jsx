@@ -28,12 +28,12 @@ const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <UpdateToy></UpdateToy>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-animals-server.vercel.app/details/${params.id}`)
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-animals-server.vercel.app/details/${params.id}`)
             }
         ]
     },

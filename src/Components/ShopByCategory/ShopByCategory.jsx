@@ -12,7 +12,7 @@ const ShopByCategory = () => {
     useEffect(() => {
         const options = { method: 'GET' };
 
-        fetch(`http://localhost:5000/AllToys/${activeTab}`, options)
+        fetch(`https://toy-animals-server.vercel.app/AllToys/${activeTab}`, options)
             .then(response => response.json())
             .then(response => setAnimals(response))
             .catch(err => console.error(err));

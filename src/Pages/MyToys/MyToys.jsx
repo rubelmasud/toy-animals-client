@@ -5,13 +5,12 @@ import MyToyRow from '../../Components/MyToyRow/MyToyRow';
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
-    console.log(user);
-
+    const [toys, setToys] = useState(myToys)
 
     useEffect(() => {
         const options = { method: 'GET' };
 
-        fetch(`http://localhost:5000/myToys/${user?.email}`, options)
+        fetch(`https://toy-animals-server.vercel.app/myToys/${user?.email}`, options)
             .then(response => response.json())
             .then(response => setMyToys(response))
             .catch(err => console.error(err));
@@ -41,6 +40,8 @@ const MyToys = () => {
                             myToys.map(myToy => <MyToyRow
                                 key={myToy._id}
                                 myToy={myToy}
+                                toys={toys}
+                                setToys={setToys}
                             > </MyToyRow>)
 
                         }

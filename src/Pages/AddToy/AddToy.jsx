@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import { Form } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const AddToy = () => {
@@ -13,7 +14,7 @@ const AddToy = () => {
     const onSubmit = data => {
         console.log(data)
 
-        fetch("http://localhost:5000/postToy", {
+        fetch("https://toy-animals-server.vercel.app/postToy", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),
@@ -21,6 +22,13 @@ const AddToy = () => {
             .then((res) => res.json())
             .then((result) => {
                 console.log(result);
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Your Animal adedded is successfully ! ',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             });
 
     };
@@ -30,7 +38,7 @@ const AddToy = () => {
         <div className='m-12 '>
             <h2 className='text-3xl text-center font-semibold mb-4 underline'>Add A Toy</h2>
             <div className="grid md:grid-cols-2 items-center">
-                <Form onSubmit={handleSubmit(onSubmit)} >
+                <Form onSubmit={handleSubmit(onSubmit)} data-aos="fade-right">
                     <input className='border-2 rounded-md w-5/12 h-14 px-2 my-2 mr-2' defaultValue="toy name" {...register("name")} />
 
                     <input className='border-2 rounded-md w-6/12 h-14 px-2' defaultValue=" Toy photo url" {...register("pictureURL")} />
@@ -58,7 +66,9 @@ const AddToy = () => {
                         <input className="bg-blue-800 w-10/12 font-semibold text-white px-8 py-2 mt-12 " value="Post Toy" type="submit" />
                     </div>
                 </Form>
-                <img src="https://i.ibb.co/vQPHmLD/toy.png" alt="toy" border="0" />
+                <div className="">
+                    <img src="https://i.ibb.co/vQPHmLD/toy.png" alt="toy" border="0" data-aos="fade-left" />
+                </div>
             </div>
         </div>
     );
