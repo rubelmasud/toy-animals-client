@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const { loggedUser, signInGoogle } = useContext(AuthContext)
@@ -22,7 +23,13 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user
                 console.log(loggedUser);
-                alert('user login is successful')
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'User login is successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 form.reset()
                 navigate(from, { replace: true })
             })
@@ -39,7 +46,13 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                alert('Login SussesFully ')
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'User login is successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 navigate(from, { replace: true })
             })
             .catch((error) => {
@@ -53,12 +66,12 @@ const Login = () => {
         <div>
             <div className="hero min-h-screen bg-base-200 my-6">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className="text-center md:ml-12">
+                    <div className="text-center md:ml-12 " data-aos="flip-up">
                         <img className='md:w-10/12 rounded-xl' src='https://i.ibb.co/SPfdDgr/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cl.webp' alt="" />
 
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 md:mr-28">
-                        <Form onSubmit={handleLogin} className="card-body ">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 md:mr-28" data-aos="flip-up">
+                        <Form onSubmit={handleLogin} className=" px-4 ">
                             <h1 className="text-5xl font-bold">Login now!</h1>
                             <div className="form-control">
                                 <label className="label">
@@ -80,7 +93,7 @@ const Login = () => {
                             <div className="divider">OR</div>
                         </Form>
                         <div className="text-center mb-6 mt-0">
-                            <button onClick={handleSignInToGoogle} className="btn btn-wide bg-blue-400 btn-sm"><FaGoogle className='text-green-700 w-6 h-6 mx-3 '></FaGoogle> login with google</button>
+                            <button onClick={handleSignInToGoogle} className="btn btn-wide bg-blue-400 rounded-none"><FaGoogle className='text-green-700 w-6 h-6 mx-3 '></FaGoogle> login with google</button>
                         </div>
                     </div>
                 </div>

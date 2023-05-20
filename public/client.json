@@ -1,0 +1,74 @@
+[
+    {
+        "id": "457896321",
+        "rating": 4.5,
+        "name": "David Anderson",
+        "email": "david.anderson@example.com",
+        "phone": "555-457-8963",
+        "address": "147 Spruce Street, Ruralville",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnawKVXvPsT-MbLwKQl__Ffu0AE2Wh0cJBKQ&usqp=CAU"
+    },
+    {
+        "id": "214365879",
+        "rating": 3.5,
+        "name": "Emily Martinez",
+        "email": "emily.martinez@example.com",
+        "phone": "555-214-3658",
+        "address": "963 Birch Avenue, Outskirts",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhDvi7pOt3JAc8DS6y5ytU_ugZYhAhNy86gQ&usqp=CAU"
+    },
+    {
+        "id": "785214369",
+        "rating": 4.5,
+        "name": "Michael Thompson",
+        "email": "michael.thompson@example.com",
+        "phone": "555-785-2143",
+        "address": "321 Maple Court, Countryside",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5sbLBPfIcQLyLa3OAkKG649JD5wdqWovag&usqp=CAU"
+    },
+    {
+        "id": "369852147",
+        "rating": 6.5,
+        "name": "Sarah Davis",
+        "email": "sarah.davis@example.com",
+        "phone": "555-369-8521",
+        "address": "654 Cedar Lane, Suburbia",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXb5NiMIj2FMzNL9rqvR0XmKXtkZpd9NJiIKTCRB_YmGsPK6Jycc0RBQFNOlDf2Vk_e8s&usqp=CAU"
+    },
+    {
+        "id": "135792468",
+        "rating": 5.5,
+        "name": "Bob Wilson",
+        "email": "bob.wilson@example.com",
+        "phone": "555-135-7924",
+        "address": "987 Pine Road, Hamletown",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5907pXYuyGaq7_Rs0AaJ51IuVwPdEr2cOXw&usqp=CAU"
+    },
+    {
+        "id": "246813579",
+        "rating": 3.0,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "phone": "555-246-8135",
+        "address": "789 Oak Avenue, Villageland",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuMgp_TlXXH3MaF1R8qR2x4gKhd899AJ31gw&usqp=CAU"
+    },
+    {
+        "id": "987654321",
+        "rating": 3.3,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "555-987-6543",
+        "address": "456 Elm Street, Townsville",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC-tQ2TWGWKZXin6cPKoVww4F7jHpGghnwVg&usqp=CAU"
+    },
+    {
+        "id": "987654321",
+        "rating": 3.5,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "555-987-6543",
+        "address": "456 Elm Street, Townsville",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyqhjJJNTc7QyRnpoGegRYJ2kzj3B_5kYjGw&usqp=CAU"
+    }
+]

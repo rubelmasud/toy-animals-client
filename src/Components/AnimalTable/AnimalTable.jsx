@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AnimalTable = ({ animal }) => {
+const AnimalTable = ({ animal, i }) => {
 
     const { name, subCategory, pictureURL, price, availableQuantity, sellerName, _id } = animal || {}
     return (
 
         <tr className=''>
+            <th>{i + 1}</th>
             <th>
                 <div className="avatar">
                     <div className="w-24 mask mask-squircle">

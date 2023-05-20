@@ -2,11 +2,11 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <div class="container mx-auto px-5 py-2 lg:px-14 lg:pt-20  ">
-            <h2 className='text-4xl text-center mb-16  font-semibold underline'>Animals Photo Gallery !</h2>
+        <div class="container mx-auto px-5 py-2 lg:px-14 lg:pt-10  ">
+            <h2 className='text-4xl text-center mb-10  font-semibold underline'>Animals Photo Gallery !</h2>
 
             <div class=" mx-auto flex flex-wrap md:m-2">
-                <div class="flex w-1/2 flex-wrap">
+                <div class="flex md:w-1/2 flex-wrap">
                     <div class="w-1/2 p-1 md:p-2 " data-aos="zoom-in-down">
                         <img
                             alt="gallery"
@@ -26,7 +26,7 @@ const Gallery = () => {
                             src="https://i.ibb.co/X7Fymx0/3d-rendering-wild-animal-23-2149962421.jpg" />
                     </div>
                 </div>
-                <div class="flex w-1/2 flex-wrap">
+                <div class="flex md:w-1/2 flex-wrap">
                     <div class="w-full p-1 md:p-2" data-aos="zoom-in-left">
                         <img
                             alt="gallery"

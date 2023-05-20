@@ -46,9 +46,9 @@ const AddToy = () => {
                     <input className='border-2 rounded-md w-6/12 h-14 px-2 mr-2' value={user?.displayName} {...register("sellerName")} />
 
                     <select {...register("subCategory")}>
-                        <option value="Math Toys">Math Toys</option>
-                        <option value="Language Toys">Language Toys</option>
-                        <option value="Science Toys">Science Toys</option>
+                        <option value="Sea Creatures">Sea Creatures</option>
+                        <option value="Wild Animals">Wild Animals</option>
+                        <option value="Farm Animals">Farm Animals</option>
                     </select>
 
                     <input className='border-2 rounded-md w-7/12 h-14 px-2 my-2 mr-1' value={user?.email} {...register("sellerEmail")} />

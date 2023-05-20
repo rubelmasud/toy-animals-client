@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../../Components/Header/Header';
 import Gallery from '../../../Components/ToysGallery/Gallery';
 import ShopByCategory from '../../../Components/ShopByCategory/ShopByCategory';
+import MyClient from '../../../Components/MyClientSection/MyClient';
 
 
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Header></Header>
             <ShopByCategory ></ShopByCategory>
             <Gallery ></Gallery>
+            <MyClient></MyClient>
         </div>
     );
 };

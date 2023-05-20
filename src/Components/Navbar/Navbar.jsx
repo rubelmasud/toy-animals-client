@@ -56,17 +56,18 @@ const Navbar = () => {
                         {items}
                     </ul>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4" data-aos="fade-right">
                     <Link className="logo" to='/'>Toy Animal</Link>
                     <img className='w-10 h-10 hover:animate-spin ' src={logo} alt="" />
                 </div>
             </div >
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-end hidden lg:flex"
+                data-aos="flip-up">
                 <ul className="lg:flex gap-4">
                     {items}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end" data-aos="fade-left">
                 {user ?
                     <>
                         <img className='rounded-full mr-2 w-8 h-8' title={user?.displayName} src={user.photoURL} alt="" />

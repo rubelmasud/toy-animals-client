@@ -58,6 +58,7 @@ const AllAnimal = () => {
                     {/* head */}
                     <thead>
                         <tr>
+                            <th>SL</th>
                             <th>Toy_Photo</th>
                             <th>Toy_Name</th>
                             <th>Sub-category</th>
@@ -70,8 +71,9 @@ const AllAnimal = () => {
                     <tbody >
 
                         {
-                            allToyAnimal.map(animal =>
+                            allToyAnimal.map((animal, i) =>
                                 <AnimalTable
+                                    i={i}
                                     key={animal._id}
                                     animal={animal}
                                 >

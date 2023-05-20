@@ -10,7 +10,7 @@ const ToyDetails = () => {
     const { name, pictureURL, sellerEmail, sellerName, subCategory, price, rating, description, availableQuantity, } = details || {}
 
     return (
-        <div className="card lg:card-side bg-base-200 shadow-xl m-12">
+        <div className="card lg:card-side bg-base-200 shadow-xl m-12" data-aos="flip-left">
             <img className='w-96  rounded-md p-2 shadow-lg' src={pictureURL} alt="Album" />
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>

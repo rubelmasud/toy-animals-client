@@ -2,89 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyToyRow = ({ myToy, toys, setToys }) => {
+const MyToyRow = ({ myToy, i, handleDelete }) => {
 
     const { name, subCategory, pictureURL, price, availableQuantity, _id } = myToy || {}
 
-    const handleDelete = (id) => {
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch(`https://toy-animals-server.vercel.app/myToys/${id}`, {
-                    method: "delete"
-                })
-                    .then(res => res.json())
-                    .then(result => {
-                        console.log(result);
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your Coffee has been deleted.',
-                                'success'
-                            )
-                            const remaining = toys.filter(cof => cof._id !== _id);
-                            setToys(remaining);
-                        }
-
-                    })
-            }
-        })
-
-    }
-
-    //         if (result.deletedCount > 0) {
-    //             const swalWithBootstrapButtons = Swal.mixin({
-    //                 customClass: {
-    //                     confirmButton: 'btn btn-success ',
-    //                     cancelButton: 'btn btn-danger mx-4 bg-red-500'
-    //                 },
-    //                 buttonsStyling: false
-    //             })
-
-    //             swalWithBootstrapButtons.fire({
-    //                 title: 'Are you sure?',
-    //                 text: "You won't be to delete this animal ?",
-    //                 icon: 'warning',
-    //                 showCancelButton: true,
-    //                 confirmButtonText: 'Yes, delete it!',
-    //                 cancelButtonText: 'No, cancel! ',
-    //                 reverseButtons: true
-    //             }).then((result) => {
-    //                 if (result.isConfirmed) {
-    //                     swalWithBootstrapButtons.fire(
-    //                         'Deleted!',
-    //                         'Your file has been deleted.',
-    //                         'success'
-    //                     )
-    //                 } else if (
-    //                     /* Read more about handling dismissals below */
-    //                     result.dismiss === Swal.DismissReason.cancel
-    //                 ) {
-    //                     swalWithBootstrapButtons.fire(
-    //                         'Cancelled',
-    //                         'Your imaginary file is safe :)',
-    //                         'error'
-    //                     )
-    //                 }
-    //             })
-    //             const remaining = toys.filter(toy => toy._id !== _id)
-    //             setToys(remaining)
-    //         }
 
 
 
-    //     }
-
-    // }
     return (
         <tr className=''>
+            <th>{i + 1}</th>
             <th>
                 <div className="avatar">
                     <div className="w-24 mask mask-squircle">
