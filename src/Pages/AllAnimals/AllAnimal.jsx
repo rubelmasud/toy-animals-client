@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import AnimalTable from '../../Components/AnimalTable/AnimalTable';
 import { Form } from 'react-router-dom';
+import useSetTitle from '../../Hooks/useSteTitle';
 
 const AllAnimal = () => {
 
     const [allToyAnimal, setAllToyAnimal] = useState([])
     const [disable, setDisable] = useState(false)
+    useSetTitle('All Toys')
 
     useEffect(() => {
         fetch('https://toy-animals-server.vercel.app/AllToys/data', {
@@ -53,7 +55,7 @@ const AllAnimal = () => {
                 <input type="text" name='name' placeholder=" Type Animal name" class="input mt-2 input-bordered input-sm w-full max-w-xs rounded-full" required />
                 <button className='btn btn-sm btn-primary  md:rounded-r-full static md:absolute left-[713px] bottom-0'>Search</button>
             </Form>
-            <div className="overflow-x-auto w-11/12 mx-auto">
+            <div className=" lg:w-11/12 mx-auto">
                 <table className="table w-full">
                     {/* head */}
                     <thead>

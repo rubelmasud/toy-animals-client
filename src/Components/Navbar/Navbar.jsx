@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/Images/Logo/images-removebg-preview.png'
+import logo from '../../assets/Images/Logo/images__1_-removebg-preview (1).png'
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
         </NavLink></li>
 
         {user ?
-            <div className='flex gap-3'>
+            <div className='md:flex gap-3'>
                 <li> <NavLink
                     to="/addToy" className={({ isActive, isPending }) =>
                         isPending ? "pending" : isActive ? "active" : ""}>Add Animal

@@ -1,11 +1,14 @@
 import React from 'react';
+import useSetTitle from '../../Hooks/useSteTitle';
 
 const Blog = () => {
+    useSetTitle('Blog')
     return (
         <div className='my-12'>
             <h3 className='text-3xl font-semibold text-center underline mb-6'>Simple Question & Answer</h3>
             <div className="md:flex">
-                <div className="w-6/12">
+
+                <div className="md:w-6/12 ">
                     <p className=' mb-6'> <small className=' font-semibold text-blue-600'>Note : </small><small>Clicking on the question will open the answer</small></p>
 
                     <div className="collapse rounded shadow-lg py-2 " data-aos="fade-down">
@@ -75,7 +78,6 @@ const Blog = () => {
                             <p>Aggregation is a way of processing a large number of documents in a collection by means of passing them through different stages. The stages make up what is known as a pipeline. The stages in a pipeline can filter, sort, group, reshape and modify documents that pass through the pipeline.</p>
                         </div>
                     </div>
-
                 </div>
                 <img className='animate-bounce h-full w-6/12 mx-auto' src="https://i.ibb.co/k6mW0Vs/3d-question-mark-symbol-and-a-person-sitting-on-top-of-it-M97-MFH-removebg-preview.png" alt="" border="0"></img>
             </div>

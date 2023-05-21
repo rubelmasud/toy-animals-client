@@ -10,7 +10,7 @@ const ToyDetails = () => {
     const { name, pictureURL, sellerEmail, sellerName, subCategory, price, rating, description, availableQuantity, } = details || {}
 
     return (
-        <div className="card lg:card-side bg-base-200 shadow-xl m-12" data-aos="flip-left">
+        <div className="card lg:card-side bg-base-200 shadow-xl m-8" data-aos="flip-left">
             <img className='w-96  rounded-md p-2 shadow-lg' src={pictureURL} alt="Album" />
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>
@@ -29,8 +29,8 @@ const ToyDetails = () => {
                 </div>
                 <hr />
                 <h5 className='font-semibold text-orange-500'>Author Info</h5>
-                <div className="flex justify-between items-center">
-                    <div className="">
+                <div className="md:flex  justify-between items-center">
+                    <div className="my-2">
                         <p><small>Seller Name : {sellerName}</small></p>
                         <p><small>Seller Email : {sellerEmail}</small></p>
                     </div>

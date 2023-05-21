@@ -22,15 +22,15 @@ const AnimalCard = ({ animal }) => {
             <img className='h-48 rounded-xl p-3 shadow' src={pictureURL} alt="" />
             <div className="card-body">
                 <h2 className="card-title ">{name}</h2>
-                <p>Price : {price}</p>
+                <p>Price : ${price}</p>
                 <p className='text-end flex items-center'>Ratting:
                     <Rating style={{ maxWidth: 70 }} value={rating} readOnly />
                 </p>
                 <div className="card-actions justify-end">
 
                     {
-                        user ? <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
-                            : <Link onClick={handleShowDetailsAlert} to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm">Show Details</button></Link>
+                        user ? <Link to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm ">Show Details</button></Link>
+                            : <Link onClick={handleShowDetailsAlert} to={`/details/${_id}`}> <button className="btn btn-primary btn-outline btn-sm ">Show Details</button></Link>
                     }
 
                 </div>

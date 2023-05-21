@@ -22,7 +22,7 @@ const AnimalTable = ({ animal, i }) => {
                 <h4>{subCategory}</h4>
             </td>
             <td>
-                <h3>{price}</h3>
+                <h3>${price}</h3>
             </td>
             <td>
                 <h4>{availableQuantity}</h4>

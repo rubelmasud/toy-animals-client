@@ -3,6 +3,7 @@ import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import useSetTitle from '../../Hooks/useSteTitle';
 
 const Login = () => {
     const { loggedUser, signInGoogle } = useContext(AuthContext)
@@ -10,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/"
+    useSetTitle('Login')
 
     const handleLogin = (event) => {
         event.preventDefault()
@@ -64,7 +66,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200 my-6">
+            <div className="hero md:min-h-screen bg-base-200 my-6">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center md:ml-12 " data-aos="flip-up">
                         <img className='md:w-10/12 rounded-xl' src='https://i.ibb.co/SPfdDgr/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cl.webp' alt="" />

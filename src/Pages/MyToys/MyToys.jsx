@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import MyToyRow from '../../Components/MyToyRow/MyToyRow';
 import Swal from 'sweetalert2';
+import useSetTitle from '../../Hooks/useSteTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([])
-
+    useSetTitle('My Toys')
 
 
     const handleDelete = (id) => {

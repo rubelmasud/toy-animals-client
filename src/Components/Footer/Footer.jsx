@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/Images/Logo/images-removebg-preview.png';
+import logo from '../../assets/Images/Logo/images__1_-removebg-preview (1).png';
 import { Link } from 'react-router-dom';
 
 import { FaGoogle, FaYoutube, FaInstagramSquare, FaTwitter, FaCopyright } from 'react-icons/fa';
@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="bg-base-200 ">
             <div className="footer p-10  text-base-content">
                 <div className=''>
-                    <img className='w-10 h-10' src={logo} alt="" />
+                    <img className='w-10 h-10 mx-auto' src={logo} alt="" />
                     <Link className="logo" to='/'>Toy Animal</Link>
                 </div>
                 <div>
