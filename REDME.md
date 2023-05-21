@@ -34,5 +34,6 @@ Users who are logged in to my toys page can see all the toys they have added
 
 ***
 
-## My Project Live Link
-[Live Link (https://toys-animal.web.app/)]
+ ## _My Project Live Link_
+
+> [Live Link (https://toys-animal.web.app/)]

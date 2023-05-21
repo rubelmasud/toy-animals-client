@@ -46,19 +46,21 @@ const AddToy = () => {
 
                     <input className='border-2 rounded-md w-6/12 h-14 px-2 mr-2' value={user?.displayName} {...register("sellerName")} />
 
+                    <input className='border-2 rounded-md w-10/12 h-14 px-2 my-2 mr-1' value={user?.email} {...register("sellerEmail")} />
+
+                    <input className='border-2 rounded-md w-7/12 h-14 px-2 my-2 mr-1' defaultValue={'subCategory'} {...register("subCategory")} />
+
                     <select {...register("subCategory")}>
                         <option value="Sea Creatures">Sea Creatures</option>
                         <option value="Wild Animals">Wild Animals</option>
                         <option value="Farm Animals">Farm Animals</option>
                     </select>
 
-                    <input className='border-2 rounded-md w-7/12 h-14 px-2 my-2 mr-1' value={user?.email} {...register("sellerEmail")} />
-
                     <input className='border-2 rounded-md w-5/12 h-14 px-2 my-2' defaultValue="Price" {...register("price")} />
 
                     <input className='border-2 rounded-md w-6/12 h-14 px-2 mx-2' defaultValue="Rating" {...register("rating")} />
 
-                    <input type='number' className='border-2 rounded-md w-5/12 h-14 px-2 my-2' defaultValue="Available quantity" {...register("availableQuantity")} />
+                    <input type='number' className='border-2 rounded-md w-8/12 h-14 px-2 my-2' defaultValue="Available quantity" {...register("availableQuantity")} />
 
                     <input className='border-2 rounded-md w-11/12 h-14 px-2 ' defaultValue="Detail description" {...register("description")} />
 

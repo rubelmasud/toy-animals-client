@@ -9,7 +9,7 @@ import useSetTitle from '../../../Hooks/useSteTitle';
 
 
 const Home = () => {
-    useSetTitle('')
+    useSetTitle('Home')
 
     return (
         <div>

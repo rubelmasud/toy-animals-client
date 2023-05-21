@@ -58,7 +58,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-4" data-aos="fade-right">
                     <Link className="logo" to='/'>Toy Animal</Link>
-                    <img className='w-10 h-10 hover:animate-spin ' src={logo} alt="" />
+                    <img className='w-10 h-10 hover:animate-spin  ' src={logo} alt="" />
                 </div>
             </div >
             <div className="navbar-end hidden lg:flex"

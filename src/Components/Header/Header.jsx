@@ -1,9 +1,8 @@
 import React from 'react';
-// import banner from '../../asse';
 
 const Header = () => {
     return (
-        <div className=' w-full md:h-screen  md:flex items-center bg-base-200 gap-3' >
+        <div className=' w-full md:h-screen  md:flex items-center bg-base-200 gap-3 ' >
             <div className="md:w-4/12" data-aos="fade-right">
                 <img src="https://i.ibb.co/vQPHmLD/toy.png" alt="toy" border="0" />
             </div>
