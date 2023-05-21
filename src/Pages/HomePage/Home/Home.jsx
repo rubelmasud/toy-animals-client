@@ -15,8 +15,8 @@ const Home = () => {
         <div>
             <Header></Header>
             <ShopByCategory ></ShopByCategory>
-            <Gallery ></Gallery>
             <FutureSection></FutureSection>
+            <Gallery ></Gallery>
             <MyClient></MyClient>
         </div>
     );
