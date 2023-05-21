@@ -3,7 +3,7 @@ import React from 'react';
 
 const ClientCard = ({ client }) => {
     const { name, rating, image, email, phone } = client || {}
-    console.log(client);
+    // console.log(client);
     return (
 
         <div className="card p-4 shadow-xl my-4" data-aos="flip-left">

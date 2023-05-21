@@ -32,7 +32,7 @@ const MyToyRow = ({ myToy, i, handleDelete }) => {
                 <h4>{availableQuantity}</h4>
             </td>
             <td>
-                <button onClick={() => { handleDelete(_id) }} className="btn btn-primary btn-outline btn-sm">Delete </button>
+                <button onClick={() => { handleDelete(_id) }} className="btn btn-error btn-outline btn-sm">Delete </button>
             </td>
 
             <th>
