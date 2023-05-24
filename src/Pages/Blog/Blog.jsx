@@ -4,7 +4,7 @@ import useSetTitle from '../../Hooks/useSteTitle';
 const Blog = () => {
     useSetTitle('Blog')
     return (
-        <div className='my-12'>
+        <div className='pt-28'>
             <h3 className='text-3xl font-semibold text-center underline mb-6'>Simple Question & Answer</h3>
             <div className="md:flex">
 

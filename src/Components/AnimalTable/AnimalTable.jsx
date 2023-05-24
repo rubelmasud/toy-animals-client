@@ -7,11 +7,11 @@ const AnimalTable = ({ animal, i }) => {
     return (
 
         <tr className=''>
-            <th>{i + 1}</th>
+            <p className='text-blue-600 font-sans font-bold mt-10'>{i + 1}</p>
             <th>
-                <div className="avatar">
-                    <div className="w-24 mask mask-squircle">
-                        <img src={pictureURL} />
+                <div className="avatar ">
+                    <div className="w-24 mask mask-squircle shadow-lg">
+                        <img className='' src={pictureURL} />
                     </div>
                 </div>
             </th>

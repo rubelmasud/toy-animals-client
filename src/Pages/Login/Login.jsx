@@ -66,7 +66,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero md:min-h-screen bg-base-200 my-6">
+            <div className="hero md:min-h-screen bg-base-200 pt-16">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center md:ml-12 " data-aos="flip-up">
                         <img className='md:w-10/12 rounded-xl' src='https://i.ibb.co/SPfdDgr/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cl.webp' alt="" />

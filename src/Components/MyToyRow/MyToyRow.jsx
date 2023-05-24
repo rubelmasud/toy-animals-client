@@ -11,7 +11,7 @@ const MyToyRow = ({ myToy, i, handleDelete }) => {
 
     return (
         <tr className=''>
-            <th>{i + 1}</th>
+            <p className='text-blue-600 font-sans font-bold mt-10'>{i + 1}</p>
             <th>
                 <div className="avatar">
                     <div className="w-24 mask mask-squircle">

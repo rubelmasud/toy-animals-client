@@ -53,7 +53,7 @@ const MyToys = () => {
     }, [user])
 
     return (
-        <div className='my-12'>
+        <div className='pt-28'>
             <h1 className='text-center text-3xl font-semibold underline mb-6'>My Posted Toys</h1>
 
             <div className="overflow-x-auto w-11/12 mx-auto">

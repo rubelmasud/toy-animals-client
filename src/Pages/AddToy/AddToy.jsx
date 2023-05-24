@@ -36,7 +36,7 @@ const AddToy = () => {
 
 
     return (
-        <div className='m-12 '>
+        <div className='pt-28 '>
             <h2 className='text-3xl text-center font-semibold mb-4 underline'>Add A Toy</h2>
             <div className="grid md:grid-cols-2 items-center">
                 <Form onSubmit={handleSubmit(onSubmit)} data-aos="fade-right">

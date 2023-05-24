@@ -61,11 +61,11 @@ const Register = () => {
 
 
     return (
-        <div className='  w-full lg:flex m-12  items-center'>
+        <div className='  w-full lg:flex pt-16 p-8  items-center'>
             <div className="w-7/12">
                 <img className='' src="https://i.ibb.co/SPfdDgr/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cl.webp" alt="" />
             </div>
-            <Form onSubmit={handleCreateUser} className="card-body  shadow-lg  rounded-lg bg-base-200 w-5/12 border mr-28">
+            <Form onSubmit={handleCreateUser} className="card-body m-12 shadow-lg  rounded-lg bg-base-200 w-5/12 border mr-28">
                 <h1 className="text-5xl font-bold">Register!</h1>
                 <div className="form-control">
                     <label className="label">

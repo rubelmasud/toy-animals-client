@@ -48,7 +48,7 @@ const AllAnimal = () => {
 
 
     return (
-        <div className='my-12 bg-base-200 p-2'>
+        <div className='pt-28 bg-base-200 p-2'>
             <h1 className='text-3xl text-center mb-6'>All Animal Toys</h1>
             <Form onSubmit={handleShortByName} className="mb-6 text-center relative">
                 <h1 >Search By Animal Name</h1>
@@ -56,7 +56,7 @@ const AllAnimal = () => {
                 <button className='btn btn-sm btn-primary  md:rounded-r-full static md:absolute left-[713px] bottom-0'>Search</button>
             </Form>
             <div className=" lg:w-11/12 mx-auto">
-                <table className="table w-full">
+                <table className="table  w-full">
                     {/* head */}
                     <thead>
                         <tr>
